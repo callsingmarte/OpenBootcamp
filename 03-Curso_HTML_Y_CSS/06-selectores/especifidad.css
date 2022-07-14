@@ -1,0 +1,12 @@
+#h1-id {
+    color: darkcyan;
+}
+.h1-clase {
+    color: orange;
+}
+h1 {
+    color: blue !important /*Evitar en la medida de lo posible el important*/;
+}
+p {
+   color: red 
+}

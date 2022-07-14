@@ -1,0 +1,41 @@
+/* Estilos para colores */
+.colores {
+    color: orangered;
+}
+
+.color-hexadecimal {
+    color: #225566
+}
+.color-rgb {
+    color: rgb(100, 0, 200)
+}
+.color-rgba {
+    color: rgba(50, 40, 60, 0.5)
+}
+
+/* Fondos */
+.fondo {
+    background-color: cornflowerblue;
+    background-image: url(https://st2.depositphotos.com/1590879/7364/v/600/depositphotos_73644929-stock-illustration-blue-triangular-background.jpg);
+    background-position: left bottom;
+}
+
+.ancho {
+    background-color: aqua;
+    width: 100px;
+}
+
+.alto {
+    background-color: yellowgreen;
+    width: 300px;
+    height: 500px;
+}
+
+.tarjeta {
+    border-style: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 1px;
+    /* border-top: none; */
+    padding: 10px 20px;
+    /* padding: 10px 20px 30px 40px; */
+}
