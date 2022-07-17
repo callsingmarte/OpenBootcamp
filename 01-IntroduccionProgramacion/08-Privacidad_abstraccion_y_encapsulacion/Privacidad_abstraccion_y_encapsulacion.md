@@ -49,7 +49,7 @@ Si dos o mas hilos acceden a una misma variable privada el programa da un error.
 
 # ABSTRACCION
 
-Es la implementacion de parte de una clase pero permite que otra parte de nuestra clase tenga libertad de definir como deben funcionar las funciones comunes;
+Es la implementacion de parte de una clase pero que delega en la clase hija como debe implementar ciertas funciones.
 
 Un metodo o clase abstracta es igual que uno normal y corriente pero tiene un calificador.
 
