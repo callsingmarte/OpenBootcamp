@@ -1,7 +1,12 @@
+/* 
+Podemos definir estilos de fuente así, 
+tambien podemos concatenar que fuentes 
+queremos que se usen si otras no estan disponibles
+*/
 html {
-    font-family: 'Poppins', sans-serif;
-    font-size: larger;
-    font-weight: 300;
-    font-style: italic;
+    font-family: 'Poppins', sans-serif; /*Define los tipos de fuente a usar*/
+    font-size: larger; /*Define el tamaño de la fuente*/
+    font-weight: 300; /*Define el peso de la fuente (como en negrita debe verse)*/
+    font-style: italic; /*Define el estilo de la fuente es decir si se debe ver en cursiva italic etc*/
 }
 
