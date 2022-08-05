@@ -1,14 +1,24 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .btn-modern {
     width: 50px;
     height: 30px;
     border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .btn-modern:hover {
-    background-color: green;    
+    background-color: lightgreen;    
     transform: translateY(-5px);
-    box-shadow: 2px 2px 2px 2px darkgreen;
+    box-shadow: 2px 2px 2px darkgreen;
     color: white;
-    transition: 0.4s;
+    transition: all 0.4s ease-in-out;
 }
 
