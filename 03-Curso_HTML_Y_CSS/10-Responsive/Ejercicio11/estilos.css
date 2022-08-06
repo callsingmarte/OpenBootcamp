@@ -8,7 +8,7 @@ body {
     background-color: lightsalmon;
     width: 20rem;
     height: 20rem;
-    flex-grow: initial;
+    flex-grow: 1;
 }
 
 .sidebar {
@@ -29,13 +29,13 @@ body {
 }
 
 @media (max-width: 640px){
+    body {
+        flex-direction: column-reverse;
+    }
     .sidebar {
-        position: relative;
         flex-direction: row;
         width: 20rem;
         height: 2rem;
-        left: 33.3vw;
-        top: 77vh;
     }
 
     .item {
