@@ -1,0 +1,46 @@
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.mainSection {
+    background-color: lightsalmon;
+    width: 20rem;
+    height: 20rem;
+    flex-grow: initial;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2px;
+    background-color:  green;
+    width: 2rem;
+    height: 20rem;
+}
+
+.item {
+    width: 1rem;
+    height: 2rem;
+    background-color: yellow;
+}
+
+@media (max-width: 640px){
+    .sidebar {
+        position: relative;
+        flex-direction: row;
+        width: 20rem;
+        height: 2rem;
+        left: 33.3vw;
+        top: 77vh;
+    }
+
+    .item {
+        width: 2rem;
+        height: 1rem;
+        background-color: yellow;
+    }
+}
