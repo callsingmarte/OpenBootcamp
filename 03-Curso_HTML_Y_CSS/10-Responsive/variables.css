@@ -1,9 +1,12 @@
+/*Aqui se definen las variables Css*/
 :root {
+    /*Esta es una variable de CSS*/
     --color-principal: rgb(0, 187, 255);
     --ancho-principal: 250px;
 }
 
 .titulo {
+    /*Asi se accede a una variable CSS*/
     color: var(--color-principal);
 }
 
