@@ -1,0 +1,10 @@
+//Mixins
+//Mixin permite reutilizar codigo
+@mixin formato-texto($bg-color: #f1f1f1){
+    width: 50rem;
+    color: $text-color;
+    text-transform: uppercase;
+    background-color: $bg-color;
+}
+//Las variables se definen con $
+$text-color: #3f3f3f;

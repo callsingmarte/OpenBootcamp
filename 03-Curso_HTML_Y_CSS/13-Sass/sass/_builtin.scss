@@ -1,0 +1,111 @@
+@use "sass:string";
+@use "sass:math";
+@use "sass:list";
+@use "sass:selector";
+@use "sass:color";
+
+/* Funciones con cadenas de texto */
+
+// @debug pasa por el terminal lo que se le defina
+@debug "hola";
+@debug string.index("Helvetica Neue", "Neue");
+
+$string: "Helvetica";
+$newString: string.insert($string, " Bold", 10);
+
+@debug $newString;
+@debug string.length($newString);
+@debug string.slice($newString, 5, 9);
+
+@debug string.to-upper-case("Roboto Mono");
+@debug string.to-lower-case("Roboto Mono");
+
+@debug string.unique-id();
+
+/* Funciones con numeros */
+@debug math.$e;
+@debug math.$pi;
+//Devuelve  un valor por debajo del numero ejemplo si es 4 devuelve 4 pero si es 4.6 devuelve 4
+@debug math.floor(4.6);
+//Devuelve  un valor por encima del numero ejemplo si es 4 devuelve 4 pero si es 4.1 devuelve 5
+@debug math.ceil(4.6);
+//Devuelve un valor redondeado al entero mas cercano
+@debug math.round(4.4);
+
+//Devuelve un valor comprendido entre el minimo y el maximo 
+@debug math.clamp(0, 6, 10); 
+
+//Devuelve el valor mas alto 
+@debug math.max(3, 4, 10, 2, 399);
+//Devuelve el valor mas bajo
+@debug math.min(3, 4, 10, 2, 399);
+//Devuelve el valor absoluto de un numero
+@debug math.abs(8);
+
+//Devuelve la potencia de un numero
+@debug math.pow(2, 12);
+//Se pueden usar funciones dentro de otras 
+@debug math.pow(2, math.abs(-23));
+
+//Devuelve el coseno de un numero
+@debug math.cos(math.$pi);
+//Devuelve el seno de un numero
+@debug math.sin(math.$pi);
+//Devuelve la tangente de un numero
+@debug math.tan(math.$pi);
+
+/* Funciones con listas */
+/* 
+una lista se puede definir asi
+$lista1: 10px 10px 0px 15px; 
+*/
+//Tambien se puden definir las listas con comas
+$lista1: 10px, 10px, 0px, 15px;
+
+@debug $lista1;
+@debug list.append($lista1, 25px, space);
+
+//Los indices empiezan desde 1 en sass
+$border-custom: solid 1px #ccc;
+@debug list.index($border-custom, 1px); //devuelve 2
+@debug list.index($border-custom, 2px); // devuelve null
+
+//$border-2: [solid, 1px, #ccc];
+//@debug list.is-bracketed($border-2);
+
+@debug list.join($lista1, $border-custom, auto);
+@debug list.length(list.join($lista1, $border-custom, auto));
+@debug list.separator($border-custom);
+@debug list.separator(list.join($lista1, $border-custom, auto));
+
+@debug list.set-nth($border-custom, 2, 2px); //cambia el valor de una posicion de la lista
+
+/* Funciones de selector */
+$selector-1: "a";
+$selector-2: ".disabled";
+//Crea un selector nuevo usando dos selectores diferentes
+@debug selector.append($selector-1, $selector-2); 
+
+//Funciones de color
+
+$color: rgb(226, 81, 255);
+@debug color.adjust($color, $red: -50, $alpha: -0.5);
+$color-2: rgb(176, 81, 255, 0.5);
+
+@debug color.complement($color);
+$color-comp: #6eff51;
+//oscurece un color
+@debug darken($color, 10%);
+$color-dark: #c300ea;
+//aclara un color
+@debug lighten($color, 20%);
+$color-light: #f3b7ff;
+
+@debug color.red($color);
+@debug color.green($color);
+@debug color.blue($color);
+
+@debug color.hue($color);
+
+@debug color.invert($color);
+$color-inv: #1dae00;

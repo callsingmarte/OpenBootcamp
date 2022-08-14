@@ -1,0 +1,12 @@
+// Al utilizar use crea un espacio de nombres
+//Componentes
+@use "sass/componentes" as comp;
+//namespace
+// $color => componentes.$color
+//Mixins 
+@use "sass/mixins";
+//Estilos
+@use "sass/estilos";
+
+//Otros
+@use "sass/builtin";

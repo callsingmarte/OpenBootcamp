@@ -1,0 +1,35 @@
+@use "mixins";
+body {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 100%;
+    background-color: lightblue;
+    min-height: 100vh;
+    padding: 0.5rem;
+}
+
+h1{
+    margin: 0;
+    //Asi se utiliza un mixin
+    @include mixins.formato-texto();
+}
+
+p{
+    @include mixins.formato-texto(#6666)
+}
+
+.listado {
+    width: 10rem;
+    background-color: aquamarine;
+    ul {
+        margin: 0 0.5rem;
+        li {
+            list-style: none;
+            &:hover {
+               color: white; 
+            }
+        }
+    }
+}
